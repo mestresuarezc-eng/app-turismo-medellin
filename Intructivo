@@ -1,0 +1,35 @@
+# =====================================================================
+# INSTRUCTIVO PARA VISUAL STUDIO CODE Y GIT - APP "ENJOY" (MEDELLÍN)
+# =====================================================================
+
+# 1. Abrir la terminal integrada en VS Code (Ctrl + Ñ) y clonar el repositorio remoto
+git clone https://github.com/mestresuarezc-eng/app-turismo-medellin.git
+
+# 2. Moverse dentro de la carpeta raíz del proyecto recién clonado en el explorador/terminal
+cd app-turismo-medellin
+
+# 3. Leer el archivo package.json e instalar todas las dependencias en la carpeta 'node_modules':
+#    - vue: Framework progresivo principal para construir componentes interactivos (SFCs).
+#    - vite: Empaquetador y servidor de desarrollo ultrarrápido optimizado para Vue 3.
+#    - leaflet: Librería core de mapas interactivos de código abierto.
+#    - leaflet-routing-machine: Plugin para trazar rutas reales de calles (OSRM) en Medellín.
+#    - tailwindcss: Framework de CSS basado en clases utilitarias para diseño móvil responsivo.
+#    - postcss / autoprefixer: Herramientas complementarias para procesar y optimizar los estilos CSS.
+npm install
+
+# 4. Iniciar el servidor local de desarrollo en VS Code (Vite) para probar la app en vivo (ej. localhost:5173)
+npm run dev
+
+# --- FLUJO DIARIO DE CAMBIOS Y VERSIONAMIENTO EN VISUAL STUDIO CODE ---
+
+# 5. Comprobar en la terminal qué archivos han sido modificados o creados recientemente en el workspace
+git status
+
+# 6. Preparar y añadir todos los archivos modificados al área de preparación (staging area) para el commit
+git add .
+
+# 7. Guardar los cambios localmente con un mensaje descriptivo (ej. diseño, rutas o tarifas de transporte)
+git commit -m "feat: descripción clara del cambio realizado en la app"
+
+# 8. Enviar los cambios confirmados de forma segura hacia la rama principal (main) en el repositorio remoto de GitHub
+git push origin main
